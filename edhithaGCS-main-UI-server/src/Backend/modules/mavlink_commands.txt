@@ -1,0 +1,268 @@
+from pymavlink import mavutil
+from flask import Flask, jsonify, request, send_from_directory
+import threading
+import time
+from modules.drone_status import drone_state
+from modules.logger_config import *
+
+global is_connected
+
+the_connection = None
+is_connected = False
+
+
+def drop(id):
+    # Determine channel and PWM values based on the provided id
+    MIN_ALT_FT = 97
+    MAX_ALT_FT = 105
+    FT_TO_M = 0.3048
+    min_alt_m = MIN_ALT_FT * FT_TO_M
+    max_alt_m = MAX_ALT_FT * FT_TO_M
+
+    logger = logging.getLogger()
+
+    # Determine channel and PWM values based on the provided id
+    if id == 1:
+        channel = 8
+        pwm_value = 2000
+    elif id == 2:
+        channel = 7
+        pwm_value = 2000
+    elif id == 3:
+        channel = 8
+        pwm_value = 1000
+    elif id == 4:
+        channel = 7
+        pwm_value = 1000
+    else:
+        logger.error(f"Invalid ID: {id}. ID must be 1 to 4.")
+        return
+
+    logging.getLogger().status(f"Waiting to drop bottle with ID {id} until altitude is within {MIN_ALT_FT}-{MAX_ALT_FT} ft...")
+
+    while True:
+        msg = the_connection.recv_match(type='GLOBAL_POSITION_INT', blocking=True, timeout=5)
+        if not msg:
+            logger.warning("No altitude data received, retrying...")
+            time.sleep(0.5)
+            continue
+
+        current_alt_m = msg.relative_alt / 1000.0  # mm to meters
+        current_alt_ft = current_alt_m / FT_TO_M
+
+        logging.getLogger().status(f"Current Altitude: {current_alt_ft:.2f} ft")
+
+        if min_alt_m <= current_alt_m <= max_alt_m:
+            logger.info(f"Altitude {current_alt_ft:.2f} ft is within range. Triggering drop...")
+
+            time.sleep(1)
+
+            # Send the MAV_CMD_DO_SET_SERVO command
+            command = mavutil.mavlink.MAV_CMD_DO_SET_SERVO
+            the_connection.mav.command_long_send(
+                1, 1, command, 0, channel, pwm_value, 0, 0, 0, 0, 0
+            )
+
+            # Wait for acknowledgment
+            ack = the_connection.recv_match(type='COMMAND_ACK', blocking=True, timeout=5)
+            if ack and ack.result == 0:
+                logger.info(f"Drop acknowledged for ID {id}: OK")
+            else:
+                error_message = f"Drop error for ID {id}: {ack.result}" if ack else "No acknowledgment received"
+                logger.error(error_message)
+
+            break
+
+        time.sleep(0.2)
+
+def lock(channel, pwm_value=1500):
+    # Set the MAV_CMD_DO_SET_SERVO command parameters
+    logging.getLogger().status(f"Locking channel  {channel}")
+    command = mavutil.mavlink.MAV_CMD_DO_SET_SERVO
+    param1 = channel
+    param3 = 0
+    param4 = 0
+    param5 = 0
+    param6 = 0
+    param7 = 0
+
+    # Send the MAV_CMD_DO_SET_SERVO command
+    the_connection.mav.command_long_send(1, 1,command,0,param1, pwm_value, param3, param4, param5, param6, param7)
+
+    # Wait for a short duration
+    time.sleep(2)
+
+
+def toggle_connection():
+    global the_connection, is_connected
+    
+    # If already connected, close the connection
+    if is_connected:
+        if the_connection is not None:
+            the_connection.close()
+            the_connection = None
+            is_connected = False
+            # Return None for the connection
+            logging.getLogger().status("Disconnected from the drone.")
+            return the_connection, is_connected
+
+    # Start a new connection to the drone
+    try:
+        # logging.getLogger().status("Attempting to connect to the drone...")
+        # the_connection = mavutil.mavlink_connection('tcp:192.168.1.21:5760')
+        the_connection = mavutil.mavlink_connection('udp:192.168.144.50:14553')
+        # the_connection = mavutil.mavlink_connection('udp:0.0.0.0:14553')
+        # the_connection = mavutil.mavlink_connection('udp:10.42.0.1:14551')
+        # the_connection = mavutil.mavlink_connection('tcp:10.42.0.1:5760')
+        logging.getLogger().status("Attempting to connect to the drone...") 
+        the_connection.wait_heartbeat()
+        logging.getLogger().status("Heartbeat received from system (system %u component %u)" %
+              (the_connection.target_system, the_connection.target_component))
+
+        # Set connection status to True only after successful connection
+        is_connected = True
+        logging.getLogger().status("Connected successfully!")
+
+
+        return the_connection, is_connected
+
+        # return the_connection, is_connected  # Return the connection and its status
+    except Exception as e:
+        print("failed")
+        logging.getLogger().status("Failed to connect to the drone: {str(e)}")  # Print the error message
+        return None, jsonify({'message': f'Failed to connect to the drone: {str(e)}'}), 500
+
+
+
+def arm():
+    global the_connection
+    try:
+        the_connection.mav.command_long_send(
+            the_connection.target_system, the_connection.target_component, 400, 0, 1, 0, 0, 0, 0, 0, 0)
+        msg = the_connection.recv_match(type='COMMAND_ACK', blocking=True)
+        global armmsgs
+        armmsgs = "armed: " + str(msg)
+        return armmsgs
+    except Exception as e:
+        armmsgs = "Error in arm: " + str(e)
+        return armmsgs
+        # logging.error("Error in arm: %s", e)
+
+
+def takeoffcommand():
+    global the_connection
+    try:
+        # Send arm command
+        print("Taking off...")
+
+        # Send takeoff command
+        the_connection.mav.command_long_send(the_connection.target_system, the_connection.target_component,
+                                             mavutil.mavlink.MAV_CMD_NAV_TAKEOFF, 0, 0, 0, 0, 0, 0, 0, 10)
+
+        # Wait for an acknowledgment
+        tkfmsg = the_connection.recv_match(type='COMMAND_ACK', blocking=True)
+        print(tkfmsg)
+        return jsonify({'status': 'success', 'message': str(tkfmsg)}), 200
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': str(e)}), 500
+
+
+def rtlcommand():
+    global the_connection
+    try:
+        # Send RTL command
+        print("Returning to launch...")
+
+        # Send RTL (Return to Launch) command
+        the_connection.mav.command_long_send(
+            the_connection.target_system, the_connection.target_component,
+            mavutil.mavlink.MAV_CMD_NAV_RETURN_TO_LAUNCH,  # RTL command
+            0, 0, 0, 0, 0, 0, 0, 0
+        )
+
+        # Wait for an acknowledgment
+        rtlmsg = the_connection.recv_match(type='COMMAND_ACK', blocking=True)
+        print(rtlmsg)
+        return jsonify({'status': 'success', 'message': str(rtlmsg)}), 200
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': str(e)}), 500
+
+
+def disarm():
+    global the_connection
+    try:
+        the_connection.mav.command_long_send(
+            the_connection.target_system, the_connection.target_component, 400, 0, 0, 0, 0, 0, 0, 0, 0)
+        msg = the_connection.recv_match(type='COMMAND_ACK', blocking=True)
+        global disarmmsgs
+        disarmmsgs = "disarmed: " + str(msg)
+        return disarmmsgs
+    except Exception as e:
+        disarmmsgs = "Error in disarm: " + str(e)
+        return disarmmsgs
+        # logging.error("Error in arm: %s", e)
+
+
+def auto():
+    global the_connection
+    try:
+        the_connection.mav.command_long_send(
+            the_connection.target_system, the_connection.target_component, 176, 0, 1, 3, 0, 0, 0, 0, 0)
+        msg = the_connection.recv_match(type='COMMAND_ACK', blocking=True)
+        global automsgs
+        automsgs = "In auto: " + str(msg)
+        return automsgs
+    except Exception as e:
+        automsgs = "Error in auto: " + str(e)
+        return automsgs
+        # logging.error("Error in auto: %s", e)
+
+
+def loiter():
+    global the_connection
+    try:
+        print("Entering Loiter...", flush=True)
+        the_connection.mav.command_long_send(
+            the_connection.target_system, the_connection.target_component, 176, 0, 1, 5, 0, 0, 0, 0, 0)
+        msg = the_connection.recv_match(type='COMMAND_ACK', blocking=True)
+        global loitermsgs
+        loitermsgs = "In loiter: " + str(msg)
+        return loitermsgs
+    except Exception as e:
+        loitermsgs = "Error in loiter: " + str(e)
+        return loitermsgs
+        # logging.error("Error in loiter: %s", e)
+
+
+def guided():
+    global the_connection
+    try:
+        the_connection.mav.command_long_send(
+            the_connection.target_system, the_connection.target_component, 176, 0, 1, 4, 0, 0, 0, 0, 0)
+        msg = the_connection.recv_match(type='COMMAND_ACK', blocking=False)
+        global guidedmsgs
+        logging.getLogger().status("Guided...")
+        # guidedmsgs = "In Guided: " + str(msg)
+        # logging.getLogger().status(guidedmsgs)
+        # return guidedmsgs
+    except Exception as e:
+        guidedmsgs = "Error in Guided: " + str(e)
+        logging.getLogger().status(guidedmsgs)
+        return guidedmsgs
+        # logging.error("Error in loiter: %s",c e)
+
+
+def stabilize():
+    global the_connection
+    try:
+        print("Entering Stabilize...", flush=True)
+        the_connection.mav.command_long_send(
+            the_connection.target_system, the_connection.target_component, 176, 0, 1, 0, 0, 0, 0, 0, 0)
+        msg = the_connection.recv_match(type='COMMAND_ACK', blocking=True)
+        global stabilizemsgs
+        stabilizemsgs = "In stabalize: " + str(msg)
+        return stabilizemsgs
+    except Exception as e:
+        stabilizemsgs = "Error in stabilize: " + str(e)
+        return stabilizemsgs
+        # logging.error("Error in loiter: %s", e)

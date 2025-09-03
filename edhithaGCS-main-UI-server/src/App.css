@@ -1,0 +1,42 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    /* Adjust the height as needed */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FAF9F6;
+
+    /* Background color */
+    padding: 0 20px;
+    /* Adjust padding as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Box shadow for subtle elevation */
+    z-index: 1000;
+    /* Ensure it appears above other content */
+}
+
+.logo {
+    max-height: 200px;
+    /* Adjust the maximum height of the logo */
+}
+
+.settings-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 35px;
+    /* Adjust the font size of the settings icon */
+    color: #555;
+    /* Color of the settings icon */
+    margin-right: 25px;
+    /* Add margin to separate it from the right edge of the header */
+}
+
+.settings-button:hover {
+    color: #333;
+    /* Color change on hover */
+}

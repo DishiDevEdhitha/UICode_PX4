@@ -1,0 +1,590 @@
+.div {
+    background: #dde1e7;
+}
+
+.manual-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------
+Header */
+
+.header-container {
+    background-color: #f8f8f8;
+    padding: 20px;
+    padding-bottom: 0px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header{
+    height: 12%;
+}
+
+.logoM {
+    max-height: 100px;
+    /* Adjust the height of the logo */
+    /* Add any additional styling for the logo */
+}
+
+.header h1 {
+    font-size: 25px;
+}
+
+.connection-button {
+    background-color: #007bff;
+    /* Blue color for default state */
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    /* Padding for inner content */
+    border-radius: 5px;
+    /* Rounded corners */
+    margin-right: 60px;
+    font-size: 20px;
+    /* Font size */
+    transition: background-color 0.3s ease;
+    /* Smooth transition effect */
+}
+
+.connection-button img {
+    filter: invert(100%);
+    width: 24px;
+    /* Adjust icon size */
+    height: 30px;
+    margin-right: 10px;
+}
+
+.connect-text {
+    font-size: 16px;
+    /* Font size */
+}
+
+.connection-button.green {
+    background-color: #28a745;
+    /* Green color for connected state */
+}
+
+
+
+.red {
+    background-color: #f44336 !important;
+    color: white !important;
+}
+
+.content-container {
+    display: flex;
+    flex: 1;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------
+Left side */
+
+.image-box {
+    display: flex;
+    height: 90%;
+    margin: 10px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding: 10px;
+    position: relative;
+}
+
+/* -------------------------------
+Common */
+.imageGrid,
+.mainImage,
+.croppedImage {
+    flex: 7;
+    /* Adjusted to 8 */
+    /* flex-basis: 60%; */
+    margin-right: 10px;
+    /* Add some spacing between the two containers */
+}
+.left-container {
+    flex: 2;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/* -------------------------------
+Image grid */
+
+.imageGrid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    border: 1px solid #ccc;
+    flex: 3;
+    height: 400px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    padding: 10px;
+    /* Add some padding to make scrolling more visually appealing */
+}
+
+.grid-container img {
+    width: 100px;
+    height: auto;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.grid-container img.selected {
+    border-color: #007bff;
+    /* Highlight the selected image */
+}
+
+.liveButtonContainer {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.liveButton {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.liveButton:hover {
+    background-color: #45a049;
+}
+
+
+/* -------------------------------
+Main Image */
+
+.mainImage {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    overflow: hidden
+}
+
+.mainImage img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain; /* This should keep the image aspect ratio intact */
+}
+
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 1100px;
+    max-height: 700px;
+    /* Remove padding */
+    padding: 0; 
+    /* Align the image */
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#modal-image {
+    position: absolute; /* Or relative */
+    top: 20px;
+    left: 230px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* -------------------------------
+Cropped Image */
+.croppedImage {
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    flex: 2;
+    margin-right: 0px;
+    overflow-y: scroll;
+}
+
+.croppedImageDisplay {
+    /* Adjust styles for the container displaying the cropped image */
+    width: 100%;
+    /* Make the container full width */
+    height: 200px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    object-fit: contain;
+    /* Add some spacing */
+}
+
+.croppedImageDisplay img {
+    padding-left: 15px;
+    /* Make the image fill the container */
+    /* height: auto; */
+    
+    /* Maintain aspect ratio */
+}
+
+.inputsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    /* Spread items evenly */
+}
+
+.inputsContainer .inputBox[type="text"] {
+    width: 90%;
+    /* Adjust width to evenly spread out */
+    margin-bottom: 10px;
+    /* Add some spacing between inputs */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.repo-button-grid {
+    
+    height: 25%; /* Manually adjustable height for the container */
+    display: grid;
+    overflow-y: scroll;
+    grid-template-columns: repeat(2, 1fr); /* 3-column grid layout */
+    /*grid-auto-rows: 25%;  Each row will take 35% of the container height */
+    grid-gap: 15px;
+    padding: 10% 0% 0% 2%;
+}
+
+.coordinatesBox {
+    width: 93%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.saveButton {
+    background-color: #4CAF50;
+    /* Green */
+    height: 30%;
+    width: 92%;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0px 0px 0px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.saveButton:hover {
+    background-color: #45a049;
+    /* Darker Green */
+}
+
+/* ---------------------------------------------------------------------------------------------------------------
+Terminal */
+
+.terminal-box {
+    height: 150px; /* Fixed height for consistent layout */
+    overflow-y: auto; /* Enable scrolling */
+    color: #0f0; /* Green text for terminal feel */
+    background-color: #1e1e1e; /* Darker background for contrast */
+    font-family: "Courier New", Courier, monospace; /* Monospace font */
+    font-size: 14px; /* Adjust for readability */
+    padding: 10px 15px; /* Adjusted padding *//* Softened corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+/* Optional: Add a blinking cursor effect */
+@keyframes blink {
+    50% { opacity: 0; }
+}
+.terminal-box::after {
+    content: "_";
+    animation: blink 1s step-start infinite;
+    color: #0f0; /* Matches text color */
+}
+
+/* Style scrollbar for modern look */
+.terminal-box::-webkit-scrollbar {
+    width: 8px;
+}
+.terminal-box::-webkit-scrollbar-track {
+    background: #2e2e2e;
+}
+.terminal-box::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+    border: 2px solid #2e2e2e;
+}
+.terminal-box::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------
+Right side */
+.right-container {
+    flex-basis: 28%;
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+}
+
+/* -------------------------------
+Controls */
+.top-right-container {
+    flex-basis: 35%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    overflow-y: auto;
+    /* Enable vertical scrollbar if needed */
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    padding: 25px;
+}
+
+.Control-Button {
+    height: auto;
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    /* padding: 15px 30px; */
+    border: 0;
+    color: #fff;
+    font-size: 15px;
+    border: 2px solid transparent;
+    border-color: #000;
+    color: #000;
+    background: transparent;
+    transition: background, color .1s ease-in-out;
+}
+
+.Control-Button:hover {
+    background-color: #708090;
+    color: #fff;
+}
+
+.armed {
+    background-color: rgb(236, 64, 64);
+    transition: background-color 0.3s ease;
+    color: white;
+    border-color: None;
+}
+.armed:hover {
+    background-color: rgb(236, 64, 64);
+    color: white;
+    border-color: white;
+}
+
+.disarmed {
+    background-color: #45a049;
+    color: white;
+    border-color: None;
+}
+.disarmed:hover {
+    background-color: #45a049;
+    color: white;
+    border-color: white;
+}
+
+.active-mode{
+    background-color: #45a049;
+}
+/* -------------------------------
+ Target Container*/
+
+ .bottom-right-container {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    height: auto;
+    flex-basis: 65%; /* Ensure container doesn't exceed the viewport */
+    display: flex; 
+    flex-direction: column;
+}
+
+.bottom-up-container {
+    box-shadow: 0px 1px 1px rgba(9, 30, 66, 0.25), 0px 0px 1px 1px rgba(9, 30, 66, 0.13);
+    height: 44%; /* Manually adjustable height for the container */
+    
+    padding: 10px;
+}
+
+
+
+.bottom-up-container button {
+    width: 100%; /* Button takes full width of the grid item */
+    height: 100%; /* Button takes full height of the grid item */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* From Uiverse.io by abrahamcalsin */ 
+.Repos-Button {
+    border-radius: 5px;
+    background: #183153;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border: none;
+  }
+  
+  .Repos-Button:after {
+    content: " ";
+    width: 0%;
+    background: #ffd401;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+  }
+  
+  
+  .Repos-Button span {
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .Repos-Button:hover span {
+    color: yellow;
+    animation: scaleUp 0.3s ease-in-out;
+  }
+  
+  
+
+
+/* Custom scrollbar styles */
+.bottom-up-container::-webkit-scrollbar {
+    width: 3px; /* Width of the scrollbar */
+}
+
+.bottom-up-container::-webkit-scrollbar-thumb {
+    background: rgba(9, 30, 66, 0.5); /* Color of the scrollbar thumb */
+    /* border-radius: 4px; Rounded corners for the thumb */
+}
+
+.bottom-up-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(9, 30, 66, 0.8); /* Darker color on hover */
+}
+
+.bottom-up-container::-webkit-scrollbar-track {
+    background: rgba(200, 200, 200, 0.2); /* Background of the scrollbar track */
+}
+
+.bottom-down-container {
+    box-shadow: 0px 1px 1px rgba(9, 30, 66, 0.25), 0px 0px 1px 1px rgba(9, 30, 66, 0.13);
+    height: 60%; /* Manually adjustable height */
+    padding: 30px;
+}
+
+
+
+/* -------------------------------
+*/
+
+
+.suggestions {
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute; /* Position the suggestions dropdown */
+    background-color: white;
+    width: 100%; /* Ensure suggestions match input width */
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.suggestions li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions li:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+}
+
+
+
+/* Battery */
+/* .data-box {
+    margin-bottom: 10px;
+}
+
+.data-box input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+
+.data-box input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+} */
+
+
+
+
+
+

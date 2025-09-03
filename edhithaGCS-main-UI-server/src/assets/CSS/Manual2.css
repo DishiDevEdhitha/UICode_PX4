@@ -1,0 +1,452 @@
+.manual-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header-container {
+    background-color: #f8f8f8;
+    padding: 2px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header h1 {
+    font-size: 25px;
+}
+
+.header {
+    height: 12%;
+}
+
+.logoM {
+    max-height: 150px;
+    /* Adjust the height of the logo */
+    /* Add any additional styling for the logo */
+}
+
+.content-container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    flex-direction: column;
+    /* Prevent content from overflowing */
+}
+
+.left-container {
+    flex: 2;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    overflow-y: auto;
+    /* Enable scrolling for the left container */
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 10px;
+}
+
+.Control-Button {
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    padding: 15px 30px;
+    border: 0;
+    color: #fff;
+    font-size: 17.5px;
+    border: 2px solid transparent;
+    border-color: #000;
+    color: #000;
+    background: transparent;
+    transition: background, color .1s ease-in-out;
+}
+
+.Control-Button:hover {
+    background-color: #708090;
+    color: #fff;
+}
+
+.connection-button {
+    background-color: #007bff;
+    /* Blue color for default state */
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    /* Padding for inner content */
+    border-radius: 5px;
+    /* Rounded corners */
+    margin-right: 60px;
+    font-size: 20px;
+    /* Font size */
+    transition: background-color 0.3s ease;
+    /* Smooth transition effect */
+}
+
+.connection-button img {
+    filter: invert(100%);
+    width: 24px;
+    /* Adjust icon size */
+    height: 30px;
+    margin-right: 10px;
+}
+
+.connect-text {
+    font-size: 16px;
+    /* Font size */
+}
+
+.connection-button.green {
+    background-color: #28a745;
+    /* Green color for connected state */
+}
+
+.red {
+    background-color: #f44336 !important;
+    color: white !important;
+}
+
+.coordinatesBox {
+    width: 85%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.saveButton {
+    background-color: #4CAF50;
+    /* Green */
+    height: 30%;
+    width: 85%;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 9px 0px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.saveButton:hover {
+    background-color: #45a049;
+    /* Darker Green */
+}
+
+.inputsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    /* Spread items evenly */
+}
+
+.inputsContainer .inputBox[type="text"] {
+    width: 38%;
+    /* Adjust width to evenly spread out */
+    margin-bottom: 10px;
+    margin-right: 10px;
+    /* Add some spacing between inputs */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.image-box {
+    display: flex;
+    height: auto;
+    margin: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.image-grid,
+.mainImage,
+.croppedImage {
+    flex: 8;
+    /* Adjusted to 8 */
+    height: 400px;
+    margin-right: 10px;
+    /* Add some spacing between the two containers */
+}
+
+.croppedImage {
+    flex: 2;
+    /* Adjusted to 2 */
+}
+
+.mainImage {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.mainImage img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain; /* This should keep the image aspect ratio intact */
+}
+
+.croppedImage {
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.image-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    border: 1px solid #ccc;
+    flex: 3;
+    height: 420px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    padding: 10px;
+    /* Add some padding to make scrolling more visually appealing */
+}
+
+.grid-container img {
+    width: 100px;
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+.grid-container img.selected {
+    border-color: #007bff;
+    /* Highlight the selected image */
+}
+
+.croppedImage {
+    padding: 10px;
+    border: 1px solid #ccc;
+
+}
+
+.croppedImageDisplay {
+    /* Adjust styles for the container displaying the cropped image */
+    width: 100%;
+    /* Make the container full width */
+    height: 200px;
+    /* Adjust height as needed */
+    /* overflow: hidden; */
+    /* Hide any overflow */
+    margin-bottom: 0px;
+    /* Add some spacing */
+}
+
+.croppedImageDisplay img {
+    width: 100%;
+    /* Make the image fill the container */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.grid-container img {
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.image-box {
+    position: relative;
+    /* Ensure relative positioning for modal */
+}
+
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 1100px;
+    max-height: 700px;
+    /* Remove padding */
+    padding: 0; 
+    /* Align the image */
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#modal-image {
+    position: absolute; /* Or relative */
+    top: 20px;
+    left: 230px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.liveButtonContainer {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.liveButton {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.liveButton:hover {
+    background-color: #45a049;
+}
+
+
+
+/* CSS for the Controls Container */
+.controlsContainer {
+    display: flex;
+    flex-direction: column; /* Align buttons vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically if needed */
+    margin-top: 50px; /* Space from the top */
+  }
+  
+  /* CSS for Takeoff and Land buttons */
+  .controlButton {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 5px 0; /* Add some space between the buttons */
+    min-height: 60px;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 150px; /* Adjust width as needed */
+    will-change: transform;
+  }
+  
+  .controlButton:disabled {
+    pointer-events: none;
+  }
+  
+  .controlButton:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .controlButton:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+  .targetContainer{
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    flex: 2;
+  }
+
+  .bottom-box {
+    width: 100%;
+    height: 100px; /* Adjust as needed */
+    display: flex;
+    justify-content: flex-end; /* Aligns control-buttons to the right end */
+    align-items: center; /* Centers vertically */
+    padding: 0 20px; /* Adds some padding for spacing */
+    background-color: #f8f8f8; /* Example background color */
+    border: 1px solid #ccc;
+  }
+  
+  .control-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .control-buttons .geobutton {
+    background-color: #007bff;
+    /* Blue color for default state */
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    /* Padding for inner content */
+    border-radius: 5px;
+    /* Rounded corners */
+    margin-right: 60px;
+    font-size: 20px;
+    /* Font size */
+    transition: background-color 0.3s ease;
+    /* Smooth transition effect */
+  }
+  
+  .control-buttons button:hover {
+    background-color: #0056b3;
+  }
+  

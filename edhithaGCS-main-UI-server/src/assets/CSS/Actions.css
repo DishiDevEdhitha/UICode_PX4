@@ -1,0 +1,85 @@
+/* Actions.css */
+
+.actions-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    /* Adjust the height as needed */
+}
+
+.actions-list {
+    position: relative;
+    padding: 0;
+    /* Remove default padding */
+    margin: 0;
+    /* Remove default margin */
+}
+
+.actions-list li {
+    list-style: none;
+    text-align: center;
+}
+
+.actions-list li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 3em;
+    padding: 5px 20px;
+    display: inline-flex;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.actions-list:hover li a {
+    color: #0002;
+}
+
+.actions-list li:hover a {
+    color: #000;
+    background: rgba(255, 255, 255, 1);
+}
+
+.actions-list li a:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    color: rgba(0, 0, 0, .1);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 500px;
+    transition: letter-spacing 0.5s, left 0.5s;
+}
+
+.actions-list li a:hover:before {
+    content: attr(data-text);
+    opacity: 1;
+    left: 50%;
+    letter-spacing: 10px;
+    width: 1800px;
+    height: 1800px;
+
+}
+
+.actions-list li:nth-child(6n+1) a:before {
+    background: #FAF9F6;
+}
+
+.actions-list li:nth-child(6n+2) a:before {
+    background: #242424;
+}
+
+.actions-list li:nth-child(6n+3) a:before {
+    background: #FAF9F6;
+}

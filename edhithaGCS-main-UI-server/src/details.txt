@@ -1,0 +1,1 @@
+cropped_image_0.png: Shape=jj, Colour=jjj, Alphanumeric=jjj, Alphanumeric Colour=jjj 
