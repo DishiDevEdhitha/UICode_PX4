@@ -1,0 +1,215 @@
+2025-09-06 19:43:19,235 - WARNING - Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+2025-09-06 19:43:19,382 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9080
+ * Running on http://192.168.1.9:9080
+2025-09-06 19:43:19,382 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-06 19:43:31,671 - STATUS - Logger connected
+2025-09-06 19:43:35,446 - STATUS - Logger connected
+2025-09-06 19:43:35,447 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:43:35,448 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:43:35,474 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:43:35,475 - INFO - 127.0.0.1 - - [06/Sep/2025 19:43:35] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:43:35,475 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:43:35,476 - INFO - 127.0.0.1 - - [06/Sep/2025 19:43:35] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:43:35,663 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00001.jpg', wd=1, mask=IN_OPEN, cookie=0, name='image_00001.jpg'>
+2025-09-06 19:43:35,711 - INFO - 127.0.0.1 - - [06/Sep/2025 19:43:35] "GET /images/image_00001.jpg HTTP/1.1" 200 -
+2025-09-06 19:43:35,713 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00001.jpg', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='image_00001.jpg'>
+2025-09-06 19:43:39,170 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00002.jpg', wd=1, mask=IN_OPEN, cookie=0, name='image_00002.jpg'>
+2025-09-06 19:43:39,253 - INFO - 127.0.0.1 - - [06/Sep/2025 19:43:39] "GET /images/image_00002.jpg HTTP/1.1" 200 -
+2025-09-06 19:43:39,255 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00002.jpg', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='image_00002.jpg'>
+2025-09-06 19:43:39,356 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00003.jpg', wd=1, mask=IN_OPEN, cookie=0, name='image_00003.jpg'>
+2025-09-06 19:43:39,376 - INFO - 127.0.0.1 - - [06/Sep/2025 19:43:39] "GET /images/image_00003.jpg HTTP/1.1" 200 -
+2025-09-06 19:43:39,378 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00003.jpg', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='image_00003.jpg'>
+2025-09-06 19:43:39,569 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00004.jpg', wd=1, mask=IN_OPEN, cookie=0, name='image_00004.jpg'>
+2025-09-06 19:43:39,602 - INFO - 127.0.0.1 - - [06/Sep/2025 19:43:39] "GET /images/image_00004.jpg HTTP/1.1" 200 -
+2025-09-06 19:43:39,647 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00004.jpg', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='image_00004.jpg'>
+2025-09-06 19:43:40,057 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00005.jpg', wd=1, mask=IN_OPEN, cookie=0, name='image_00005.jpg'>
+2025-09-06 19:43:40,091 - INFO - 127.0.0.1 - - [06/Sep/2025 19:43:40] "GET /images/image_00005.jpg HTTP/1.1" 200 -
+2025-09-06 19:43:40,092 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00005.jpg', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='image_00005.jpg'>
+2025-09-06 19:43:40,557 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:43:40,559 - INFO - 127.0.0.1 - - [06/Sep/2025 19:43:40] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:43:40,559 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:43:40,628 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00006.jpg', wd=1, mask=IN_OPEN, cookie=0, name='image_00006.jpg'>
+2025-09-06 19:43:40,708 - INFO - 127.0.0.1 - - [06/Sep/2025 19:43:40] "GET /images/image_00006.jpg HTTP/1.1" 200 -
+2025-09-06 19:43:40,709 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00006.jpg', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='image_00006.jpg'>
+2025-09-06 19:43:41,136 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00007.jpg', wd=1, mask=IN_OPEN, cookie=0, name='image_00007.jpg'>
+2025-09-06 19:43:41,177 - INFO - 127.0.0.1 - - [06/Sep/2025 19:43:41] "GET /images/image_00007.jpg HTTP/1.1" 200 -
+2025-09-06 19:43:41,178 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00007.jpg', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='image_00007.jpg'>
+2025-09-06 19:43:41,533 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00008.jpg', wd=1, mask=IN_OPEN, cookie=0, name='image_00008.jpg'>
+2025-09-06 19:43:41,580 - INFO - 127.0.0.1 - - [06/Sep/2025 19:43:41] "GET /images/image_00008.jpg HTTP/1.1" 200 -
+2025-09-06 19:43:41,582 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00008.jpg', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='image_00008.jpg'>
+2025-09-06 19:43:42,031 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00009.jpg', wd=1, mask=IN_OPEN, cookie=0, name='image_00009.jpg'>
+2025-09-06 19:43:42,054 - INFO - 127.0.0.1 - - [06/Sep/2025 19:43:42] "GET /images/image_00009.jpg HTTP/1.1" 200 -
+2025-09-06 19:43:42,056 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00009.jpg', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='image_00009.jpg'>
+2025-09-06 19:43:42,474 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00010.jpg', wd=1, mask=IN_OPEN, cookie=0, name='image_00010.jpg'>
+2025-09-06 19:43:42,510 - INFO - 127.0.0.1 - - [06/Sep/2025 19:43:42] "GET /images/image_00010.jpg HTTP/1.1" 200 -
+2025-09-06 19:43:42,567 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00010.jpg', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='image_00010.jpg'>
+2025-09-06 19:43:42,928 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00011.jpg', wd=1, mask=IN_OPEN, cookie=0, name='image_00011.jpg'>
+2025-09-06 19:43:43,027 - INFO - 127.0.0.1 - - [06/Sep/2025 19:43:43] "GET /images/image_00011.jpg HTTP/1.1" 200 -
+2025-09-06 19:43:43,029 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images/image_00011.jpg', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='image_00011.jpg'>
+2025-09-06 19:43:45,774 - INFO - 127.0.0.1 - - [06/Sep/2025 19:43:45] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:43:45,775 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:43:45,775 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:43:50,791 - INFO - 127.0.0.1 - - [06/Sep/2025 19:43:50] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:43:50,792 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:43:50,792 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:43:55,829 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:43:55,830 - INFO - 127.0.0.1 - - [06/Sep/2025 19:43:55] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:43:55,830 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:44:00,893 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:44:00,894 - INFO - 127.0.0.1 - - [06/Sep/2025 19:44:00] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:44:00,894 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:44:05,895 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:44:05,895 - INFO - 127.0.0.1 - - [06/Sep/2025 19:44:05] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:44:05,896 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:44:10,998 - INFO - 127.0.0.1 - - [06/Sep/2025 19:44:10] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:44:10,998 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:44:10,998 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:44:15,996 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:44:15,996 - INFO - 127.0.0.1 - - [06/Sep/2025 19:44:15] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:44:15,996 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:44:21,173 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:44:21,174 - INFO - 127.0.0.1 - - [06/Sep/2025 19:44:21] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:44:21,174 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:44:26,173 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:44:26,174 - INFO - 127.0.0.1 - - [06/Sep/2025 19:44:26] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:44:26,174 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:44:31,664 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:44:31,665 - INFO - 127.0.0.1 - - [06/Sep/2025 19:44:31] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:44:31,666 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:44:36,895 - INFO - 127.0.0.1 - - [06/Sep/2025 19:44:36] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:44:36,896 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:44:36,896 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:44:41,896 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:44:41,896 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:44:41,897 - INFO - 127.0.0.1 - - [06/Sep/2025 19:44:41] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:44:46,896 - INFO - 127.0.0.1 - - [06/Sep/2025 19:44:46] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:44:46,897 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:44:46,897 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:44:51,896 - INFO - 127.0.0.1 - - [06/Sep/2025 19:44:51] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:44:51,896 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:44:51,897 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:44:56,896 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:44:56,898 - INFO - 127.0.0.1 - - [06/Sep/2025 19:44:56] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:44:56,898 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:45:01,897 - INFO - 127.0.0.1 - - [06/Sep/2025 19:45:01] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:45:01,898 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:45:01,898 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:45:06,898 - INFO - 127.0.0.1 - - [06/Sep/2025 19:45:06] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:45:06,898 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:45:06,901 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:45:11,897 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:45:11,897 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:45:11,898 - INFO - 127.0.0.1 - - [06/Sep/2025 19:45:11] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:45:16,897 - INFO - 127.0.0.1 - - [06/Sep/2025 19:45:16] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:45:16,898 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:45:16,898 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:45:21,896 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:45:21,896 - INFO - 127.0.0.1 - - [06/Sep/2025 19:45:21] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:45:21,896 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:45:26,898 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:45:26,899 - INFO - 127.0.0.1 - - [06/Sep/2025 19:45:26] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:45:26,899 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:45:31,898 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:45:31,898 - INFO - 127.0.0.1 - - [06/Sep/2025 19:45:31] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:45:31,898 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:45:37,269 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:45:37,269 - INFO - 127.0.0.1 - - [06/Sep/2025 19:45:37] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:45:37,269 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:45:42,270 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:45:42,271 - INFO - 127.0.0.1 - - [06/Sep/2025 19:45:42] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:45:42,271 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:45:47,270 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:45:47,271 - INFO - 127.0.0.1 - - [06/Sep/2025 19:45:47] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:45:47,271 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:45:52,270 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:45:52,270 - INFO - 127.0.0.1 - - [06/Sep/2025 19:45:52] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:45:52,271 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:45:57,270 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:45:57,270 - INFO - 127.0.0.1 - - [06/Sep/2025 19:45:57] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:45:57,270 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:46:02,271 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:46:02,272 - INFO - 127.0.0.1 - - [06/Sep/2025 19:46:02] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:46:02,273 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:46:07,271 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:46:07,272 - INFO - 127.0.0.1 - - [06/Sep/2025 19:46:07] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:46:07,272 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:46:12,347 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:46:12,348 - INFO - 127.0.0.1 - - [06/Sep/2025 19:46:12] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:46:12,348 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:46:17,345 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:46:17,345 - INFO - 127.0.0.1 - - [06/Sep/2025 19:46:17] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:46:17,346 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:46:22,346 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:46:22,346 - INFO - 127.0.0.1 - - [06/Sep/2025 19:46:22] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:46:22,346 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:46:27,349 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:46:27,349 - INFO - 127.0.0.1 - - [06/Sep/2025 19:46:27] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:46:27,350 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:46:32,355 - INFO - 127.0.0.1 - - [06/Sep/2025 19:46:32] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:46:32,356 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:46:32,356 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:46:37,350 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:46:37,351 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:46:37,352 - INFO - 127.0.0.1 - - [06/Sep/2025 19:46:37] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:46:42,351 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:46:42,352 - INFO - 127.0.0.1 - - [06/Sep/2025 19:46:42] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:46:42,352 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:46:47,352 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:46:47,353 - INFO - 127.0.0.1 - - [06/Sep/2025 19:46:47] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:46:47,353 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:46:53,486 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:46:53,487 - INFO - 127.0.0.1 - - [06/Sep/2025 19:46:53] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:46:53,487 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:46:58,764 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:46:58,765 - INFO - 127.0.0.1 - - [06/Sep/2025 19:46:58] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:46:58,765 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:47:03,744 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:47:03,745 - INFO - 127.0.0.1 - - [06/Sep/2025 19:47:03] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:47:03,745 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:47:08,561 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:47:08,561 - INFO - 127.0.0.1 - - [06/Sep/2025 19:47:08] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:47:08,562 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:47:13,780 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:47:13,781 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:47:13,782 - INFO - 127.0.0.1 - - [06/Sep/2025 19:47:13] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:47:18,777 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:47:18,778 - INFO - 127.0.0.1 - - [06/Sep/2025 19:47:18] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:47:18,778 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:47:24,019 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:47:24,019 - INFO - 127.0.0.1 - - [06/Sep/2025 19:47:24] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:47:24,019 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:47:29,021 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:47:29,021 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:47:29,022 - INFO - 127.0.0.1 - - [06/Sep/2025 19:47:29] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:47:34,253 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:47:34,253 - INFO - 127.0.0.1 - - [06/Sep/2025 19:47:34] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:47:34,253 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:47:39,254 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:47:39,255 - INFO - 127.0.0.1 - - [06/Sep/2025 19:47:39] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:47:39,255 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:47:44,253 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:47:44,253 - INFO - 127.0.0.1 - - [06/Sep/2025 19:47:44] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:47:44,253 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:47:49,298 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:47:49,298 - INFO - 127.0.0.1 - - [06/Sep/2025 19:47:49] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:47:49,298 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:47:54,299 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:47:54,300 - INFO - 127.0.0.1 - - [06/Sep/2025 19:47:54] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:47:54,300 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:47:59,299 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:47:59,300 - INFO - 127.0.0.1 - - [06/Sep/2025 19:47:59] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:47:59,300 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:48:04,299 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:48:04,299 - INFO - 127.0.0.1 - - [06/Sep/2025 19:48:04] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:48:04,300 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:48:09,317 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:48:09,318 - INFO - 127.0.0.1 - - [06/Sep/2025 19:48:09] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:48:09,318 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:48:14,318 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:48:14,319 - INFO - 127.0.0.1 - - [06/Sep/2025 19:48:14] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:48:14,319 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2025-09-06 19:48:19,317 - INFO - 127.0.0.1 - - [06/Sep/2025 19:48:19] "GET /all-images HTTP/1.1" 200 -
+2025-09-06 19:48:19,318 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2025-09-06 19:48:19,318 - DEBUG - in-event <InotifyEvent: src_path=b'/home/dishita/Desktop/UI_PX4/Codes/images/images', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>

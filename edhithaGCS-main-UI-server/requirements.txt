@@ -1,5 +1,0 @@
-flask
-flask-cors
-watchdog
-flask-socketio
-geopy

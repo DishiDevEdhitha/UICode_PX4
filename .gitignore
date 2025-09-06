@@ -1,0 +1,14 @@
+# venv
+virus/
+
+# Big PX4 tree
+PX4-Autopilot/
+
+# Common ignores
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.venv
+node_modules/
+.DS_Store

@@ -1,0 +1,69 @@
+Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+Logger connected
+Logger connected
+Logger disconnected. Reason: unknown
+Error on request:
+Traceback (most recent call last):
+  File "/home/dishita/Desktop/UI_PX4/virus/lib/python3.10/site-packages/werkzeug/serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "/home/dishita/Desktop/UI_PX4/virus/lib/python3.10/site-packages/werkzeug/serving.py", line 336, in execute
+    write(b"")
+  File "/home/dishita/Desktop/UI_PX4/virus/lib/python3.10/site-packages/werkzeug/serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+Logger connected
+Logger disconnected. Reason: unknown
+Error on request:
+Traceback (most recent call last):
+  File "/home/dishita/Desktop/UI_PX4/virus/lib/python3.10/site-packages/werkzeug/serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "/home/dishita/Desktop/UI_PX4/virus/lib/python3.10/site-packages/werkzeug/serving.py", line 336, in execute
+    write(b"")
+  File "/home/dishita/Desktop/UI_PX4/virus/lib/python3.10/site-packages/werkzeug/serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+Logger connected
+PX4 Heartbeat received (system 1, component 0)
+Connection Successfull...
+Received coordinates: x=761, y=233
+Cropping Image...
+1
+Received data: image_00010.jpg, plant, , 1, plant
+Saving Details...
+Error saving detailsP: name 'ros' is not defined
+1
+Received data: image_00010.jpg, plant, , 1, plant
+Saving Details...
+Error saving detailsP: name 'ros' is not defined
+Logger disconnected. Reason: unknown
+Error on request:
+Traceback (most recent call last):
+  File "/home/dishita/Desktop/UI_PX4/virus/lib/python3.10/site-packages/werkzeug/serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "/home/dishita/Desktop/UI_PX4/virus/lib/python3.10/site-packages/werkzeug/serving.py", line 336, in execute
+    write(b"")
+  File "/home/dishita/Desktop/UI_PX4/virus/lib/python3.10/site-packages/werkzeug/serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+Logger connected
+PX4 Heartbeat received (system 1, component 0)
+Connection Successfull...
+Received coordinates: x=692, y=272
+Cropping Image...
+1
+Received data: image_00010.jpg, tree, , 1, tree
+Saving Details...
+Error saving detailsP: name 'ros' is not defined
+Logger disconnected. Reason: unknown
+Error on request:
+Traceback (most recent call last):
+  File "/home/dishita/Desktop/UI_PX4/virus/lib/python3.10/site-packages/werkzeug/serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "/home/dishita/Desktop/UI_PX4/virus/lib/python3.10/site-packages/werkzeug/serving.py", line 336, in execute
+    write(b"")
+  File "/home/dishita/Desktop/UI_PX4/virus/lib/python3.10/site-packages/werkzeug/serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+Logger connected
+PX4 Heartbeat received (system 1, component 0)
+Connection Successfull...

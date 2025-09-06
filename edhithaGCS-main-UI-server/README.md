@@ -1,3 +1,0 @@
--Open folder in VS Code
--In the terminal run "npm install" this installs all the required dependencies
--Now run "npm run dev" to start the servers
